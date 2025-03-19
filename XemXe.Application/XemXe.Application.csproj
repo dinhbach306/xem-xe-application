@@ -11,7 +11,11 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.400" />
+      <PackageReference Include="AWSSDK.S3" Version="3.7.415.20" />
       <PackageReference Include="Mapster" Version="7.4.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     </ItemGroup>
 
 </Project>

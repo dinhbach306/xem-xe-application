@@ -29,6 +29,6 @@ public class Car
     public bool IsAvailable { get; set; } = true;
 
     public CarModel CarModel { get; set; }
-    
     public Color Color { get; set; }
+    public virtual ICollection<Image> Images { get; set; } = new List<Image>();
 }

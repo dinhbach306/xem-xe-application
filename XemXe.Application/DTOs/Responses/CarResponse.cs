@@ -10,4 +10,5 @@ public class CarResponse
     public decimal Price { get; set; }
     public int Year { get; set; }
     public bool IsAvailable { get; set; }
+    public List<string> ImageUrls { get; set; } = new List<string>();
 }

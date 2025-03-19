@@ -1,3 +1,4 @@
+using Amazon.S3;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
 using XemXe.Application.Mappings;
@@ -19,7 +20,11 @@ builder.Services.AddDbContext<CarDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddScoped<IAwsS3Service, AwsS3Service>();
 
+//AWS S3
+builder.Services.AddAWSService<IAmazonS3>(builder.Configuration.GetAWSOptions());
+    
 // Register mapping dto (Mapster)
 // MappingConfig.CarMappings();
 TypeAdapterConfig.GlobalSettings.Apply(MappingConfig.GetRegister());

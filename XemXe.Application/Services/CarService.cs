@@ -9,10 +9,12 @@ namespace XemXe.Application.Services;
 public class CarService : ICarService
 {
     private readonly IUnitOfWork _unitOfWork;
+    private readonly IAwsS3Service _s3Service;
     
-    public CarService(IUnitOfWork unitOfWork)
+    public CarService(IUnitOfWork unitOfWork, IAwsS3Service s3Service)
     {
         _unitOfWork = unitOfWork;
+        _s3Service = s3Service;
     }
     
     public async Task<ApiResponse<List<CarResponse>>> GetAllCarsAsync()
@@ -68,6 +70,18 @@ public class CarService : ICarService
             var car = request.Adapt<Car>();
             _unitOfWork.Cars.Add(car);
             await _unitOfWork.CommitAsync();
+            if (request.Images != null && request.Images.Any())
+            {
+                var folder = "cars";
+                var imageUrls = await _s3Service.UploadFilesAsync(request.Images, folder);
+                foreach (var url in imageUrls)
+                {
+                    var image = new Image { CarId = car.Id, Url = url };
+                    _unitOfWork.Images.Add(image);
+                }
+                await _unitOfWork.CommitAsync();
+            }
+            
             var response = car.Adapt<CarResponse>();
             return ApiResponse<CarResponse>.Success(response, "Thêm xe thành công", 201);
         } catch (Exception ex)

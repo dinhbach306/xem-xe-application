@@ -18,7 +18,8 @@ public class CarMappingRegister : IRegister
         config.NewConfig<Car, CarResponse>()
             .Map(dest => dest.Manufacturer, src => src.CarModel.Manufacturer)
             .Map(dest => dest.Model, src => src.CarModel)
-            .Map(dest => dest.Type, src => src.CarModel.CarType);
+            .Map(dest => dest.Type, src => src.CarModel.CarType)
+            .Map(dest => dest.ImageUrls, src => src.Images.Select(i => i.Url).ToList());
     }
 }
 

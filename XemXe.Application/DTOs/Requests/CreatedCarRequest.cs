@@ -1,4 +1,6 @@
-﻿namespace XemXe.Application.DTOs.Requests;
+﻿using Microsoft.AspNetCore.Http;
+
+namespace XemXe.Application.DTOs.Requests;
 
 public class CreatedCarRequest
 {
@@ -7,4 +9,5 @@ public class CreatedCarRequest
     public decimal Price { get; set; }
     public int Year { get; set; }
     public bool IsAvailable { get; set; }
+    public List<IFormFile> Images { get; set; } = new List<IFormFile>();
 }

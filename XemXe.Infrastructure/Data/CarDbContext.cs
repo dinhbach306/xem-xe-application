@@ -13,5 +13,5 @@ public class CarDbContext : DbContext
     public DbSet<CarModel> Models { get; set; }
     public DbSet<Color> Colors { get; set; }
     public DbSet<Car> Cars { get; set; }
-    
+    public DbSet<Image> Images { get; set; }
 }
