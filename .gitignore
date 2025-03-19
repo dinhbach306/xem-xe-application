@@ -1,0 +1,26 @@
+﻿bin/
+obj/
+[Oo]bj
+[Bb]in
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/Properties/launchSettings.json
+
+# JetBrains Rider
+.idea/
+
+# NuGet Packages Directory
+packages
+
+# Ignore NuGet binary
+Source/.nuget/NuGet.exe
+
+# NuGet Packages
+*.nupkg

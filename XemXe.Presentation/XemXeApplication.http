@@ -1,0 +1,6 @@
+@XemXeApplication_HostAddress = http://localhost:5236
+
+GET {{XemXeApplication_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

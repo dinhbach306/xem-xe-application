@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XemXe.Presentation", "XemXe.Presentation\XemXe.Presentation.csproj", "{E13CA4DD-08E0-44D8-93CC-26E866918388}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XemXe.Domain", "XemXe.Domain\XemXe.Domain.csproj", "{92E25463-145F-4BA6-B4A0-25946BA8D0A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XemXe.Application", "XemXe.Application\XemXe.Application.csproj", "{8EFCF111-50E9-462D-8629-04A798203365}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XemXe.Infrastructure", "XemXe.Infrastructure\XemXe.Infrastructure.csproj", "{70753E59-F255-478E-B5DE-762452BCCA71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E13CA4DD-08E0-44D8-93CC-26E866918388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E13CA4DD-08E0-44D8-93CC-26E866918388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E13CA4DD-08E0-44D8-93CC-26E866918388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E13CA4DD-08E0-44D8-93CC-26E866918388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92E25463-145F-4BA6-B4A0-25946BA8D0A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92E25463-145F-4BA6-B4A0-25946BA8D0A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92E25463-145F-4BA6-B4A0-25946BA8D0A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92E25463-145F-4BA6-B4A0-25946BA8D0A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EFCF111-50E9-462D-8629-04A798203365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EFCF111-50E9-462D-8629-04A798203365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EFCF111-50E9-462D-8629-04A798203365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EFCF111-50E9-462D-8629-04A798203365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70753E59-F255-478E-B5DE-762452BCCA71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70753E59-F255-478E-B5DE-762452BCCA71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70753E59-F255-478E-B5DE-762452BCCA71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70753E59-F255-478E-B5DE-762452BCCA71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
