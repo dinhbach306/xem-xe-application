@@ -1,3 +1,5 @@
+using Amazon;
+using Amazon.Extensions.NETCore.Setup;
 using Amazon.S3;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +25,14 @@ builder.Services.AddScoped<ICarService, CarService>();
 builder.Services.AddScoped<IAwsS3Service, AwsS3Service>();
 
 //AWS S3
-builder.Services.AddAWSService<IAmazonS3>(builder.Configuration.GetAWSOptions());
+builder.Services.AddAWSService<IAmazonS3>(new AWSOptions
+{
+    Region = RegionEndpoint.APSoutheast1,
+    Credentials = new Amazon.Runtime.BasicAWSCredentials(
+        builder.Configuration["AWS:AccessKey"],
+        builder.Configuration["AWS:SecretKey"]
+        )
+});
     
 // Register mapping dto (Mapster)
 // MappingConfig.CarMappings();

@@ -31,7 +31,7 @@ public class CarsController(ICarService carService) : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddCar([FromBody] CreatedCarRequest request)
+    public async Task<IActionResult> AddCar([FromForm] CreatedCarRequest request)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
         await carService.AddCarAsync(request);

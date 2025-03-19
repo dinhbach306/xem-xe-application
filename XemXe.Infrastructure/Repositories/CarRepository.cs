@@ -19,6 +19,7 @@ public class CarRepository : GenericRepository<Car>, ICarRepository
             .Include(c => c.CarModel)
             .ThenInclude(cm => cm.CarType)
             .Include(c => c.Color)
+            .Include(c => c.Images)
             .Where(c => c.CarModel.ManufacturerId == manufacturerId)
             .ToListAsync();
     }
@@ -31,6 +32,7 @@ public class CarRepository : GenericRepository<Car>, ICarRepository
             .Include(c => c.CarModel)
             .ThenInclude(cm => cm.CarType)
             .Include(c => c.Color)
+            .Include(c => c.Images)
             .ToListAsync();
     }
     
@@ -42,6 +44,7 @@ public class CarRepository : GenericRepository<Car>, ICarRepository
             .Include(c => c.CarModel)
             .ThenInclude(cm => cm.CarType)
             .Include(c => c.Color)
+            .Include(c => c.Images)
             .FirstOrDefaultAsync(c => c.Id == id);
     }
 }
